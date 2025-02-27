@@ -98,6 +98,20 @@ public class gestioneventos {
         categorias.get(categoria).add(nombre);
         System.out.println("Evento creado con éxito.");
     }
+    public static void inscribirseEvento() {
+        System.out.print("Ingrese su email: ");
+        String email = sc.nextLine();
+        if (!usuarios.containsKey(email)) {
+            System.out.println("Usuario no registrado.");
+        }
+        System.out.print("Ingrese el nombre del evento al que desea inscribirse: ");
+        String evento = sc.nextLine();
+        if (!inscripciones.containsKey(evento)) {
+            System.out.println("Evento no encontrado.");
+        }
+        inscripciones.get(evento).add(email);
+        System.out.println("Inscripción realizada con éxito.");
+    }
 }
 
 
