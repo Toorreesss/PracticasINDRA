@@ -70,6 +70,34 @@ public class gestioneventos {
         organizadores.put(nombre, contacto);
         System.out.println("Organizador registrado con éxito.");
     }
+    public static void crearEvento() {
+        System.out.print("Ingrese nombre del evento: ");
+        String nombre = sc.nextLine();
+        System.out.print("Ingrese fecha: ");
+        String fecha = sc.nextLine();
+        System.out.print("Ingrese duración: ");
+        String duracion = sc.nextLine();
+        System.out.print("Ingrese ubicación: ");
+        String ubicacion = sc.nextLine();
+        System.out.print("Ingrese tipo (conferencia/taller): ");
+        String tipo = sc.nextLine();
+        System.out.print("Ingrese organizador: ");
+        String organizador = sc.nextLine();
+        System.out.print("Ingrese categoría: ");
+        String categoria = sc.nextLine();
+        
+        if (!organizadores.containsKey(organizador)) {
+            System.out.println("El organizador no está registrado.");
+        }
+        
+        eventos.add(new String[]{nombre, fecha, duracion, ubicacion, tipo, organizador, categoria});
+        inscripciones.put(nombre, new ArrayList<>());
+        if (!categorias.containsKey(categoria)) {
+            categorias.put(categoria, new ArrayList<>());
+        }
+        categorias.get(categoria).add(nombre);
+        System.out.println("Evento creado con éxito.");
+    }
 }
 
 
