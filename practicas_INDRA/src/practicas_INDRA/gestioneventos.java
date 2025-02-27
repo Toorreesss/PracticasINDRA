@@ -120,6 +120,24 @@ public class gestioneventos {
             System.out.println("Evento: " + evento[0] + " | Fecha: " + evento[1] + " | Tipo: " + evento[4] + " | Organizador: " + evento[5] + " | Categoría: " + evento[6]);
         }
     }
+    public static void cancelarEvento() {
+        System.out.print("Ingrese el nombre del evento a cancelar: ");
+        String evento = sc.nextLine();
+        if (!inscripciones.containsKey(evento)) {
+            System.out.println("Evento no encontrado.");
+        }
+        for (int i = 0; i < eventos.size(); i++) {
+            if (eventos.get(i)[0].equals(evento)) {
+                eventos.remove(i);
+                break;
+            }
+        }
+        inscripciones.remove(evento);
+        for (ArrayList<String> lista : categorias.values()) {
+            lista.remove(evento);
+        }
+        System.out.println("Evento cancelado con éxito.");
+    }
 }
 
 
