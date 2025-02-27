@@ -26,7 +26,7 @@ public class gestioneventos {
             
             switch (opcion) {
                 case 1:
-                	//registrarUsuario();
+                	registrarUsuario();
                 	break;
                 case 2:
                 	//registrarOrganizador();
@@ -54,4 +54,15 @@ public class gestioneventos {
             }
         } while (opcion != 8);
     }
+	public static void registrarUsuario() {
+		System.out.print("Ingrese correo electronico: ");
+		String email = sc.nextLine();
+		System.out.print("Ingrese contraseña: ");
+		String pass = sc.nextLine();
+		usuarios.put(email, pass);
+		System.out.println("Usuario registrado con éxito.");
+	}
 }
+
+
+
