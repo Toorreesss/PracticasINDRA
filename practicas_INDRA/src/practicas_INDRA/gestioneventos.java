@@ -138,6 +138,14 @@ public class gestioneventos {
         }
         System.out.println("Evento cancelado con éxito.");
     }
+    public static void buscarEventosPorCategoria() {
+        System.out.print("Ingrese la categoría a buscar: ");
+        String categoria = sc.nextLine();
+        if (!categorias.containsKey(categoria)) {
+            System.out.println("No hay eventos en esta categoría.");
+        }
+        System.out.println("Eventos en la categoría '" + categoria + "': " + categorias.get(categoria));
+    }
 }
 
 
