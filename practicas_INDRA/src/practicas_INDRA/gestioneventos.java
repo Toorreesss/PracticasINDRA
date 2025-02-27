@@ -62,6 +62,14 @@ public class gestioneventos {
 		usuarios.put(email, pass);
 		System.out.println("Usuario registrado con éxito.");
 	}
+    public static void registrarOrganizador() {
+        System.out.print("Ingrese nombre del organizador: ");
+        String nombre = sc.nextLine();
+        System.out.print("Ingrese contacto: ");
+        String contacto = sc.nextLine();
+        organizadores.put(nombre, contacto);
+        System.out.println("Organizador registrado con éxito.");
+    }
 }
 
 
