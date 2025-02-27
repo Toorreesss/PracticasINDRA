@@ -112,6 +112,7 @@ public class gestioneventos {
         inscripciones.get(evento).add(email);
         System.out.println("Inscripción realizada con éxito.");
     }
+    
 }
 
 
