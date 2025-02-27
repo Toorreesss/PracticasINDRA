@@ -112,7 +112,14 @@ public class gestioneventos {
         inscripciones.get(evento).add(email);
         System.out.println("Inscripción realizada con éxito.");
     }
-    
+    public static void listarEventos() {
+        if (eventos.isEmpty()) {
+            System.out.println("No hay eventos registrados.");
+        }
+        for (String[] evento : eventos) {
+            System.out.println("Evento: " + evento[0] + " | Fecha: " + evento[1] + " | Tipo: " + evento[4] + " | Organizador: " + evento[5] + " | Categoría: " + evento[6]);
+        }
+    }
 }
 
 
